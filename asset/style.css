@@ -6,4 +6,5 @@ header {
     font-size: 28px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
+    position: relative;
 }

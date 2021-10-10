@@ -18,16 +18,19 @@
             </div>
           </div>
         </header>
-        <div class="container">
-            <div class="row"><div class="col-6">
-            <div class="card mx-auto mb-3">
-            <h5 class="card-header">John Smith<br /><br />Manager</h5>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: 1</li>
-                <li class="list-group-item">Email Address: Johnsmith@yahoo.com</li>
-                <li class="list-group-item">Office Phone: 468-8795</li>
+
+        <div class="col-4 mt-4">
+            <div class="card bg-primary border-dark">
+                <div class="card-header text-white">
+                    <h3 id="name">${data.name}</h3>
+                    <ul>
+                <li class="list-group-item" id="ID">${data.id}</li>
+                <li class="list-group-item" id="Email">${data.email}</li>
+                <li class="list-group-item" id="Office Number">${data.officenumber}</li>
             </ul>
             </div>
+        </div>
+    </div>
             <div class="container">
                 <div class="row"><div class="col-6">
                     <div class="card mx-auto mb-3">

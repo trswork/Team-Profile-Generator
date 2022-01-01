@@ -1,12 +1,20 @@
-const generateHTML = require('./src/generateHTML');
-// node modules 
 const fs = require('fs'); 
 const inquirer = require('inquirer');
+const path = require("path");
+const fileDirectory = path.resolve(__dirname, "dist");
+const filePath = path.join(fileDirectory, "index.html");
 
 const Manager = require('./lib/manager');
 const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern');
-const { data } = require('browserslist');
+const renderHTML = require("./lib/generateHTML");
+
+const employee = [];
+
+function initApp() {
+    startHtml();
+    addEmployee();
+}
 
 const addEmployee = () => {
     return inquirer.prompt([

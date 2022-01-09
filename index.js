@@ -4,10 +4,11 @@ const path = require("path");
 const fileDirectory = path.resolve(__dirname, "dist");
 const filePath = path.join(fileDirectory, "index.html");
 
-const Manager = require('./lib/manager');
-const Engineer = require('./lib/engineer');
-const Intern = require('./lib/intern');
-const renderHTML = require("./lib/generateHTML");
+const Manager = require('./lib/Manager');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
+const generateHTML = require('./src/generateHTML');
+const { data } = require('browserslist');
 
 const employee = [];
 

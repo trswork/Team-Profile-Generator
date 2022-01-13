@@ -5,7 +5,7 @@ test("creates a manager object", () => {
     const manager = new Manager('John', 26, 'Johntest@test.com', '(704)1234565');
   
     expect(manager.name).toEqual(expect.any(String));
-    expect(manager.ID).toEqual(expect.any(String));
+    expect(manager.ID).toEqual(expect.any(Number));
     expect(manager.email).toEqual(expect.any(String));
     expect(manager.officeNumber).toEqual(expect.any(Number));
   });
@@ -19,19 +19,19 @@ test("creates a manager object", () => {
   test("gets manager ID", () => {
     const manager = new Manager('John', 26, 'Johntest@test.com', '(704)1234565');
   
-    expect(manager.getID()).toEqual(expect.any(String));
+    expect(manager.getID()).toEqual(expect.any(Number));
   });
 
   test("gets manager Email", () => {
     const manager = new Manager('John', 26, 'Johntest@test.com', '(704)1234565');
   
-    expect(manager.getEmail()).toEqual(expect.any(String));
+    expect(manager.getEmail()).toEqual(expect.stringContaining(employee.email.toString()));
   });
   
   test("gets manager Office Number", () => {
     const manager = new Manager('John', 26, 'Johntest@test.com', '(704)1234565');
   
-    expect(manager.getOfficeNumber()).toEqual(expect.any(String));
+    expect(manager.getOfficeNumber()).toEqual(expect.any(Number));
   });
 
   test("gets manager Role", () => {
